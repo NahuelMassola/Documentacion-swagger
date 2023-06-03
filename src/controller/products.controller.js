@@ -24,7 +24,7 @@ const getProductIdBd = async (req, res) => {
     
     const id = req.params.pid
     const getProductId = await productServices.getProductId(id);
-    return HttpResp.OK(res , "Succes" , getProductId)
+    return HttpResp.OK(res , "Prodcuto Encontrado" , getProductId)
   } catch (error) {
     return HttpResp.BadRequest(res , "Error" , error)
   }

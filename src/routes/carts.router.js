@@ -8,10 +8,10 @@ const { JWT_STRATEGY } = require('../config/config');
 const router =  Router();
 
 
-router.post('/', passportCustom(JWT_STRATEGY),userPermission,createCarts)
-router.post('/:cid', passportCustom(JWT_STRATEGY),userPermission,addProductsToCart)
-router.get('/:cid', bdgetCartId)
-router.get ("/", getAllCart)
+router.post('/', passportCustom(JWT_STRATEGY),userPermission,createCarts) //ok
+router.post('/:cid', passportCustom(JWT_STRATEGY),userPermission,addProductsToCart) //ok
+router.get('/:cid', bdgetCartId)  //ok
+router.get ("/", getAllCart) //ok
 router.delete('/:cid/product/:pid', deleteProductToCart);
 router.delete('/:cid', emptyToCart);
 router.put('/:cid/product/:pid', updateToQuantityProduct);
